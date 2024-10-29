@@ -7,11 +7,11 @@
 -- GROUP BY revenue
 
 SELECT 
-    date_date,
     orders_id,
-    revenue,
-    quantity,
-    purchase_cost,
-    margin
+    date_date,
+    ROUND(SUM(revenue),2),
+    SUM(quantity),
+    SUM(purchase_cost),
+    SUM(margin)
 FROM {{ref("int_sales_margin")}}
-GROUP BY date_date
+GROUP BY orders_id, date_date
