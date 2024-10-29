@@ -9,7 +9,7 @@
 SELECT 
     orders_id,
     date_date,
-    ROUND(SUM(revenue),2),
+    ROUND(SUM(revenue),2), 
     SUM(quantity),
     SUM(purchase_cost),
     SUM(margin)
