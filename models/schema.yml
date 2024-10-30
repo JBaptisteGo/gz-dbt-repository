@@ -11,9 +11,9 @@ sources:
            - name: date_date
              description: date of purchase
            - name: order_id 
-             description: order number
+             description: foreign key to ship - order number
            - name: pdt_id 
-             description: product number
+             description: foreign key to product - product number
            - name: revenue
              description: revenue per order
            - name: quantity
@@ -26,7 +26,7 @@ sources:
          description: product of Greenweez / row product_id & purchase_price
          columns:
            - name: products_id 
-             description: product number
+             description: Primary key - product number
              tests:
              - unique
              - not_null
@@ -37,7 +37,7 @@ sources:
          description: sales of Greenweez / row orders_id, shipping_fee, logcost, ship_cost
          columns:
            - name: orders_id 
-             description: order number
+             description: primary key - order number
              tests:
              - unique
              - not_null                 
